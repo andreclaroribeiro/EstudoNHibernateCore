@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Data\AssemblyLocator.cs" />
+    <Compile Remove="Data\ISessionFactoryBuilder.cs" />
+    <Compile Remove="Data\SessionFactoryBuilder.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Extension\StartupExtensions original.c" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="fluentnhibernate" Version="2.1.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.1.1" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="2.1.1" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="2.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EstudoNHibernateCore.Entities\EstudoNHibernateCore.Entities.csproj" />
+  </ItemGroup>
+
+</Project>
